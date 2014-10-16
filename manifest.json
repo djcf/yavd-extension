@@ -1,31 +1,36 @@
 {
 	"manifest_version": 2,
 
-	"name": "Search Verbatim (sic)",
-	"description": "Forces Google to use Verbatim searching and adds the plus ('+') sign to all search terms in DuckDuckGo. Those are the only two I use regularly enough to know the operators for; I am happy to add more search engines - email me with details of the search engine and how to enable verbatim mode.",
-	"version": "1.0",
+	"name": "Yet Another Video Downloader",
+	"description": "Displays a list of video links found on a web page along with the option to download them",
+	"version": "0.1",
 
 	"background": {
 		"scripts":["background.js"]
 	},
+/*    "content_scripts": [{
+    	"matches": ["<all_urls>"],
+        "js": ["libs/jQuery.js", "content.js"]
+    }],*/
 
 	"icons": { 
-		"16": "icons/sic-16.png",
-		"19": "icons/sic-19.png",
-        "48": "icons/sic-48.png",
-        "128": "icons/sic-128.png" 
+		"16": "icons/icon-16.png",
+		"19": "icons/icon-19.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png" 
     },
 
 	"permissions": [
-		"webRequest", "tabs", "webRequestBlocking", 
-		"http://*/search?*", "https://*/search?*", "*://www.duckduckgo.com/?q=*", "*://duckduckgo.com/?q=*"
+		"webRequest", "tabs", "webRequestBlocking", "downloads",
+		"<all_urls>"
 	],
 	"browser_action": {
-		"default_icon": "icons/sic-19.png",
-		"default_title": "Toggle verbatim search (sic)"
+		"default_icon": "icons/icon-19.png",
+		"default_title": "See URLs which might be video streams",
+		"default_popup": "menu.html"
 	},
 
 	"author": "Daniel Fisher",
-	"homepage_url": "https://github.com/stormsaber/sic-extension",
-	"short_name": "[sic]"
+	"homepage_url": "https://github.com/stormsaber/yavd-extension",
+	"short_name": "[yavd]"
 }

@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="libs/jQuery.js"></script>
+		<script src="menu.js"></script>
+		<style>
+			body {
+				background: #f5f5f5;
+				font-family: 'Helvetica', 'Verdana', sans-serif;
+				width: 500px;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			.downloadBtn {
+				display: inline-block;
+				width: 26px;
+				height: 26px;
+				background: none;
+				border: none;
+				background-image: url("icons/download.png");
+				vertical-align: middle;
+			}
+			input {
+				width: 450px;
+			}
+			.downloadBtn span {
+				display: none;
+			}
+		</style>
+	</head>
+<body>
+	<h4>Videos found in this page</h4>
+
+	<ul id="theList"></ul>
+
+	<div style="display: none;" id="theTemplate">
+		<li class="listItemTemplate">
+			<button class="downloadBtn"><span></span></button>
+			<input type="text" class="theUrl" size="100">
+		</li>
+	</div>
+</html>
